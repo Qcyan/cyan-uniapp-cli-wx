@@ -1,0 +1,54 @@
+//微信viewport
+$wx-viewport: 2;
+//$vw_fontsize: 75; // iPhone 6尺寸的根元素大小基准值
+//$vw_design: 750;
+
+//rem
+@function rem($px, $base-font-size: 46.875) {
+  @return #{($px / $base-font-size) * 1 + 'rem'};
+}
+
+//微信小程序rpx的转化 以2倍被转化
+@function rpx($size) {
+  @return #{$size * $wx-viewport + 'rpx'};
+}
+
+
+//vw
+//$vw_base: 375;
+//@function rem($px) {
+//  @return #{($px / $vw_base) * 100 + 'vw'};
+//}
+
+//rpx 字体大小 10px -> 35px 的 rpx
+@for $i from 10 through 35 {
+  .#{$prefix-name}f-#{$i}rpx {
+    font-size:rpx($i);
+  }
+}
+//rem 字体大小 12px -> 50px 的 rem
+@for $i from 24 through 100 {
+  .#{$prefix-name}f-#{$i}re {
+    font-size: rem($i)
+  }
+}
+
+
+
+html {
+  //font-size: ($vw_fontsize / ($vw_design / 2)) * 100vw;
+  //// 同时，通过Media Queries 限制根元素最大最小值
+  //@media screen and (max-width: 320px) {
+  //  font-size: 64px;
+  //}
+  //@media screen and (min-width: 540px) {
+  //  font-size: 108px;
+  //}
+}
+
+// body 也增加最大最小宽度限制，避免默认100%宽度的 block 元素跟随 body 而过大过小
+body {
+  max-width: 540px;
+  min-width: 320px;
+}
+

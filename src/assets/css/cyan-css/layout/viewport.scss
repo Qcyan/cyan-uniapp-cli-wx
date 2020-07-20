@@ -1,0 +1,36 @@
+//配置
+@import '../config/viewport';
+
+/*移动端viewport配置font-size*/
+html[data-mobile-device=true] {
+	color:pink;
+	font-size: #{$viewport-font-size + 'vw'} !important;
+	@media (min-width: #{$viewport-min-width + 'px'}) {
+		font-size: 14px;
+	}
+}
+
+//宽高
+@mixin wh($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+body,
+html {
+	@include wh(100%, 100%);
+	//background-color: $fill-base;
+}
+
+//@media screen and (min-width: 500px) {
+//
+//	body,
+//	.mint-tabbar,
+//	.mint-header {
+//		max-width: 500px;
+//		margin: 0 auto;
+//		position: relative;
+//	}
+//}
+
+
