@@ -1,9 +1,8 @@
 import code from '../../code/code'; //错误码
 import { codeHandler } from '../../code'; //错误码处理
-
-//import { clearLoginStatus, navigateToReLogin } from '$mp-api/login';
+import { clearLoginStatus, navigateToReLogin } from '$mp-api/login';
 import { showToast } from '$mp-api/toast';
-//import { getCurrentPath } from "$mp-api/page";
+import { getCurrentPath } from "$mp-api/page";
 
 //拦截处理
 export function responseInterceptor (opts) {
@@ -38,11 +37,11 @@ export function responseInterceptor (opts) {
         title: '服务异常',
       });
     } else if (res.statusCode === 401) {
-//      clearLoginStatus();
+      clearLoginStatus();
       //跳转重新登录页面
-//      navigateToReLogin({
-//        path: getCurrentPath()
-//      });
+      navigateToReLogin({
+        path: getCurrentPath()
+      });
     }
     reject(res.data);
   }

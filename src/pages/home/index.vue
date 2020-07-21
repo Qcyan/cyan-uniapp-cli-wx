@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <div	class="cy-pd-tb-30rpx cy-row cy-f-18rpx" >
+    <div	class="cy-pd-tb-30rpx cy-row cy-f-18rpx" v-if="!isLogin">
       <div @click="logins" class="cy-btn cy-btn-base">
         登录
       </div>
@@ -9,13 +9,16 @@
 </template>
 
 <script>
-  let utils = require('cyan-utils');
+  const { mapState } = Vuex;
   export default {
     data() {
       return {
         loginStatus:true,
         title: 'Hello'
       }
+    },
+    computed: {
+      ...mapState(['isLogin'])
     },
     onLoad() {
       this.$request({
@@ -39,9 +42,10 @@
     methods: {
       logins(){
         this.$login().then(() => {
-//          this.init();
+//          this.getData();
         });
-        console.log(1234865)
+      },
+      getData(){
       }
     }
   }

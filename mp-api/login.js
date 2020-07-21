@@ -10,7 +10,6 @@ import { showModal } from './modal';
 //扩展到Vue中
 export function loginInVue (Vue){
   Vue.prototype.$login = login;
-  Vue.prototype.$loggedIn = loggedIn;
 }
 
 //检查是否登录了,检查login的配置中在storage中是否存在
@@ -53,6 +52,7 @@ export function clearLoginStatus () {
 //设置指定的登录态到storage
 export function setLoginStorage (data) {
   const gotData = utils.hook(null, config.login.hooks.got, [data]);
+  console.log(gotData,588);
   utils.each(config.login.storage, ( key, _key ) => {
     if (key in gotData) {
       uni.setStorageSync(_key, gotData[ key ]);
@@ -170,8 +170,26 @@ function sendLoginCode(opts){
   })
 }
 
-//wx loggedIn
-export function loggedIn (opts){
 
+//是否为重登页面
+export let isReLoginPage = false;
+//设置是否重登的状态
+export function setIsReLoginPage (status) {
+  isReLoginPage = status;
+}
+//跳转重登页面
+export function navigateToReLogin ( opts = {} ) {
+  //避免
+  if (isReLoginPage) return;
+  //设置是否重登的状态
+  setIsReLoginPage(true);
+  //设置最后的路由地址
+  setLastPath(opts.path);
+  //清空登录态
+  clearLoginStatus();
+  //跳转绑定手机页面
+  uni.navigateTo({
+    url: config.path.reLogin
+  });
 }
 

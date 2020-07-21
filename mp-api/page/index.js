@@ -50,7 +50,8 @@ export function setLastPath (path) {
 //回到设置的最后一个路由上
 export function backLastRoute ( opts = {} ) {
   const { type } = opts;
-  const url = store.state.lastPath;
+  const url = store.state.main.lastPath;
+  console.log(store.state.main,type)
   switch (type) {
     case 'launch':
       return uni.reLaunch({

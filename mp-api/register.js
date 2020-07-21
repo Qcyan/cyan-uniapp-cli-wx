@@ -1,6 +1,7 @@
 import config from '@config';
 import { setLastPath, getCurrentPath } from "./page";
 
+//没有注册绑定手机
 export function redirectRegister(){
   let path = getCurrentPath();
   //设置最后的路由地址,存入store

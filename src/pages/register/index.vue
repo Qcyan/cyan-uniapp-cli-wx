@@ -89,9 +89,10 @@
 
       //注册成功
       registerSuccess(data) {
+        console.log(data)
         // 设置信息到storage中
         setLoginStorage(data);
-        //登录成功后设置用户信息
+        //登录成功后设置用户信息存store
         setUserInfo(data);
         // 这里将自动补全用户信息
         backLastRoute({
