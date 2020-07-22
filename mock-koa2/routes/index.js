@@ -25,10 +25,14 @@ router.get('/string', async (ctx, next) => {
   })
 })
 
-router.get('/json', async (ctx, next) => {
-  ctx.body = {
-    title: 'koa2 json'
-  }
+router.post('/upload_img', async (ctx, next) => {
+  let upload_msg = ctx.request.body;
+  console.log(upload_msg)
+  ctx.body = await Mock.mock({
+    code:200,
+    upload_msg:upload_msg,
+    message:'上传成功'
+  })
 })
 
 module.exports = router

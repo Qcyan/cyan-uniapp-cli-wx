@@ -26,22 +26,17 @@ export function mpInVue ( Vue: any ) {
 	pageInVue(Vue);
 	//消息相关
 	messageInVue(Vue);
-	//登录相关
-	loginInVue(Vue);
+
 	//设置分享
 	shareInVue(Vue);
-	//扩展 wx.request,带上session_key处理
-	requestInVue(Vue);
+
 	//扩展 wx.getLocation
 	locationInVue(Vue);
 	//图片相关
 	imageInVue(Vue);
-	//提示相关
-	modalInVue(Vue);
-	//弹窗相关
-	toastInVue(Vue);
-	//loading相关
-	loadingInVue(Vue);
+
+
+
 	//扫一扫
 	scanCodeInVue(Vue);
 	//动画相关

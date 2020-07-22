@@ -1,27 +1,33 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/home/index",
+			"path": "pages/demo/index",
 			"style": {
 				"navigationBarTitleText": "首页"
 			}
 		},
 		{
-			"path": "pages/register/index",
+			"path": "pages/demo/register",
 			"style": {
 				"navigationBarTitleText": "注册"
 			}
 		},
 		{
-			"path": "pages/bind-phone/index",
+			"path": "pages/demo/bind-phone",
 			"style": {
 				"navigationBarTitleText": "绑定手机"
 			}
 		},
 		{
-			"path": "pages/re-login/index",
+			"path": "pages/demo/re-login",
 			"style": {
 				"navigationBarTitleText": "重新登录"
+			}
+		},
+		{
+			"path": "pages/demo/upload-img",
+			"style": {
+				"navigationBarTitleText": "上传图片"
 			}
 		}
 	],

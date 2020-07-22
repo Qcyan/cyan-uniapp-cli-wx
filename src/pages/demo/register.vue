@@ -10,7 +10,7 @@
         <button class="bz-btn bz-btn-base" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">
           快速登录
         </button>
-        <navigator url="/pages/bind-phone/index" class="bz-btn bz-btn-base">
+        <navigator url="/pages/demo/bind-phone" class="bz-btn bz-btn-base">
           手机号绑定登录
         </navigator>
       </div>

@@ -8,7 +8,7 @@ export function redirectRegister(){
   setLastPath(path);
   //跳转绑定手机页面
   uni.reLaunch({
-    url: '/pages/register/index'
+    url: '/pages/demo/register'
   });
 }
 

@@ -15,10 +15,10 @@ const config = {
   //路径相关
   //路径相关
   path: {
-    home: "/pages/home/index",       //首页地址
+    home: "/pages/demo/index",       //首页地址
     webview: "/pages/webview/index",
-    reLogin: "/pages/re-login/index",
-    register:'/pages/register/index'
+    reLogin: "/pages/demo/re-login",
+    register:'/pages/demo/register'
   },
 
   //底部地址信息，暂时用于relogin的时候的回跳处理
@@ -27,7 +27,7 @@ const config = {
   pages: {
     //设置最后的路由黑名单配置
     lastPathBlackList: [{
-      path: /register|bind-phone/
+//      path: /register|bind-phone/
     }]
   },
   //登录相关
@@ -91,7 +91,7 @@ const config = {
       phone: 'n'
     },
     blackList: [{
-      path: /register|bind-phone/
+//      path: /register|bind-phone/
     }]
   },
 
@@ -104,7 +104,7 @@ const config = {
   //上传成功
   upload: {
     //上传地址
-    url: `https://portal.kindpetro.com.cn/base/saveMoneySapp/specialCar/uploadPicture`
+    url: `http://192.168.188.133:3000/home/upload_img`
   },
 
   request: {
