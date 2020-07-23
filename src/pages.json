@@ -29,6 +29,12 @@
 			"style": {
 				"navigationBarTitleText": "上传图片"
 			}
+		},
+		{
+			"path": "pages/demo/webview",
+			"style": {
+				"navigationBarTitleText": "webview"
+			}
 		}
 	],
 	"globalStyle": {

@@ -11,11 +11,11 @@ class WebView {
 		this.webView = {};
 	}
 
-	setWebView ( webview: any ) {
+	setWebView ( webview ) {
 		this.webView = webview;
 	}
 
-	getWebView (): any {
+	getWebView () {
 		return this.webView;
 	}
 
@@ -23,11 +23,7 @@ class WebView {
 		this._init();
 	}
 
-	navigateTo ( opts: {
-		url: string;
-		src: string;
-		title?: string;
-	} ) {
+	navigateTo ( opts ) {
 		this.setWebView(opts);
 		uni.navigateTo({
 			url: opts.url || config.path.webview
@@ -35,6 +31,6 @@ class WebView {
 	}
 }
 
-export function webViewInVue ( Vue: any ): void {
+export function webViewInVue ( Vue ) {
 	Vue.prototype.$webView = new WebView();
 }

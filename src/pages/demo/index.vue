@@ -47,9 +47,20 @@
 
     <div class="cy-row cy-pd-20rpx">
       <button @click="openWebView" class="cy-btn cy-btn-base">
-        webview
+        webview跳外链
       </button>
     </div>
+
+    <!-- 询问层 -->
+    <!--<BvActionSheet :visible.sync="actionShow" title="BvActionSheet">-->
+      <!--<scroll-view scroll-y="true" style="height:500rpx;">-->
+        <!--<ul class="bz-reset-ul">-->
+          <!--<li v-for="i in list" :key="i" class="bz-pd-20rpx">-->
+            <!--选项{{i}}-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</scroll-view>-->
+    <!--</BvActionSheet>-->
 
   </view>
 </template>
@@ -132,9 +143,13 @@
       },
 
       openWebView() {
+        //跳外链方式
         this.$webView.navigateTo({
-          src: 'https://mp.weixin.qq.com/s/GwC0FQ8yuzXtqrVKZEMZBA',
+          src: 'https://uniapp.dcloud.io',
           title: '新闻'
+        });
+        uni.navigateTo({
+          url: './webview'
         });
       },
     }
