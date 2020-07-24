@@ -18,6 +18,6 @@ function scanCode ( opts = {} ){
 }
 
 //在vue扩展
-export function scanCodeInVue ( Vue ): void {
+export function scanCodeInVue ( Vue ) {
   Vue.prototype.$scanCode = scanCode;
 }

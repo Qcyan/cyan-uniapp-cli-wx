@@ -4,6 +4,7 @@ import utils from 'cyan-utils';
 //查询黑名单
 export function blackListFilter ( opts ) {
   const {path, blackList = []} = opts;
+  console.log(path);
   const homePath = config.path.home;
   for (let i = 0; i < blackList.length; i++) {
     const item = blackList[i];

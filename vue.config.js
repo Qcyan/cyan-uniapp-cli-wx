@@ -15,16 +15,13 @@ const config = utils.extend(publicVueConfig, {
       alias: {
         /*@开头都是本项目内的*/
         '@': resolve('src'),
-//        '@mock': resolve('mock'),
         '@store': resolve('src/store'),
         '@config': resolve('src/config'),
         '@assets': resolve('src/assets'),
         '@css': resolve('src/assets/css'),
         '@static': resolve('static'),
-//        '@components': resolve('src/components'),
+        '@components': resolve('src/components'),
 //        '$components': resolve(`src/components`)
-
-//        '$mp-api': resolve(`src/mp-api`),
       }
     }
   },

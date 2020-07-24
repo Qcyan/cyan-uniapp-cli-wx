@@ -84,8 +84,8 @@ const config = {
 
   //分享相关
   share: {
-    title: "blue-wx-mini-program",
-    deps: "blue-wx-mini-program is vue public template",
+    title: "cyan share title",
+    deps: "cyan share deps",
     imgUrl: "",
     params: {
       phone: 'n'

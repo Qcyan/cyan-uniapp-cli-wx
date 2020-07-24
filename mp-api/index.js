@@ -8,9 +8,9 @@ import { loginInVue } from "./login";
 //import { locationInVue } from './location';
 import { imageInVue } from './image';
 //import { mpUpdate } from './update';
-//import { shareInVue } from './share';
-//import { scanCodeInVue } from "./scan-code";
-//import { animationInVue } from "./animation";
+import { shareInVue } from './share';
+import { scanCodeInVue } from "./scan-code";
+import { animationInVue } from "./animation";
 import { uploadInVue } from './upload';
 import { invoiceInVue } from './invoice';
 import { webViewInVue } from './webview';
@@ -39,15 +39,15 @@ export function mpInVue ( Vue ) {
 //  //消息相关
   messageInVue(Vue);
 //  //设置分享
-//  shareInVue(Vue);
+  shareInVue(Vue);
 //  //扩展 wx.getLocation
 //  locationInVue(Vue);
 //  //图片相关
   imageInVue(Vue);
 //  //扫一扫
-//  scanCodeInVue(Vue);
+  scanCodeInVue(Vue);
 //  //动画相关
-//  animationInVue(Vue);
+  animationInVue(Vue);
 //  //上传相关
   uploadInVue(Vue);
 //  //发票

@@ -51,33 +51,63 @@
       </button>
     </div>
 
+    <!-- 测试animation -->
+    <div class="cy-row cy-pd-20rpx">
+      <button class="cy-btn cy-btn-base" @click="toggleAction">
+        测试animation || BvActionSheet组件
+      </button>
+    </div>
+    
     <!-- 询问层 -->
-    <!--<BvActionSheet :visible.sync="actionShow" title="BvActionSheet">-->
-      <!--<scroll-view scroll-y="true" style="height:500rpx;">-->
-        <!--<ul class="bz-reset-ul">-->
-          <!--<li v-for="i in list" :key="i" class="bz-pd-20rpx">-->
-            <!--选项{{i}}-->
-          <!--</li>-->
-        <!--</ul>-->
-      <!--</scroll-view>-->
-    <!--</BvActionSheet>-->
+    <BvActionSheet :visible.sync="actionShow" title="BvActionSheet">
+      <scroll-view scroll-y="true" style="height:500rpx;">
+        <ul class="cy-reset-ul">
+          <li v-for="i in list" :key="i" class="cy-pd-20rpx">
+            选项{{i}}
+          </li>
+        </ul>
+      </scroll-view>
+    </BvActionSheet>
+
+    <!-- 测试animation -->
+    <div class="cy-row cy-pd-20rpx">
+      <button class="cy-btn cy-btn-base" @click="toggleLayer">
+        测试BvLayer组件
+      </button>
+    </div>
+
+    <!-- 弹层 -->
+    <BvLayer :visible.sync="layerShow">
+      <div class="cy-bg-white" style="width:200rpx;height:200rpx;">
+        layer 内容
+      </div>
+    </BvLayer>
 
   </view>
 </template>
 
 <script>
   import Vuex from 'vuex';
+  import BvActionSheet from '@components/BvActionSheet'
+  import BvLayer from '@components/BvLayer'
 
   const { mapState } = Vuex;
   export default {
     data() {
       return {
         loginStatus:true,
-        title: 'Hello'
+        title: 'Hello',
+        list: [1,2,3,4,6],
+        actionShow: false,
+        layerShow: false,
       }
     },
     computed: {
       ...mapState(['isLogin'])
+    },
+    components:{
+      BvActionSheet,
+      BvLayer
     },
     onLoad() {
       this.$request({
@@ -151,6 +181,13 @@
         uni.navigateTo({
           url: './webview'
         });
+      },
+
+      toggleAction() {
+        this.actionShow = !this.actionShow;
+      },
+      toggleLayer() {
+        this.layerShow = !this.layerShow;
       },
     }
   }
