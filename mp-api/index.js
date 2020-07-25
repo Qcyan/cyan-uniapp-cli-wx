@@ -7,7 +7,7 @@ import { loginInVue } from "./login";
 //import { pageInVue } from './page';
 //import { locationInVue } from './location';
 import { imageInVue } from './image';
-//import { mpUpdate } from './update';
+import { mpUpdate } from './update';
 import { shareInVue } from './share';
 import { scanCodeInVue } from "./scan-code";
 import { animationInVue } from "./animation";
@@ -33,7 +33,7 @@ export function mpInVue ( Vue ) {
 
 
   //检查更新小程序版本
-//  mpUpdate();
+  mpUpdate();
 //  //页面相关
 //  pageInVue(Vue);
 //  //消息相关

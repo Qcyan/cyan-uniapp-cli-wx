@@ -84,9 +84,9 @@ const config = {
 
   //分享相关
   share: {
-    title: "cyan share title",
+    title: "cyan分享标题",
     deps: "cyan share deps",
-    imgUrl: "",
+    imgUrl: "https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=137628589,3436980029&fm=26&gp=0.jpg",
     params: {
       phone: 'n'
     },

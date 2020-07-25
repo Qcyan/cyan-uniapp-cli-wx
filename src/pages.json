@@ -35,6 +35,12 @@
 			"style": {
 				"navigationBarTitleText": "webview"
 			}
+		},
+		{
+			"path": "pages/demo/more-load",
+			"style": {
+				"navigationBarTitleText": "加载更多"
+			}
 		}
 	],
 	"globalStyle": {
@@ -43,4 +49,5 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
+//	"onReachBottomDistance":160
 }

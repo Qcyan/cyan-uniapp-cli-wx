@@ -54,7 +54,7 @@
     <!-- 测试animation -->
     <div class="cy-row cy-pd-20rpx">
       <button class="cy-btn cy-btn-base" @click="toggleAction">
-        测试animation || BvActionSheet组件
+        测试animation || 询问层组件
       </button>
     </div>
     
@@ -83,6 +83,13 @@
       </div>
     </BvLayer>
 
+
+    <div class="cy-row cy-pd-20rpx">
+      <navigator url="/pages/demo/more-load" class="cy-btn cy-btn-base">
+        加载更多
+      </navigator>
+    </div>
+
   </view>
 </template>
 
@@ -90,6 +97,7 @@
   import Vuex from 'vuex';
   import BvActionSheet from '@components/BvActionSheet'
   import BvLayer from '@components/BvLayer'
+  import config from '@config';
 
   const { mapState } = Vuex;
   export default {
@@ -108,6 +116,17 @@
     components:{
       BvActionSheet,
       BvLayer
+    },
+    onShareAppMessage () {
+      //内部页面单独做的分享
+      const share = {
+        title: '首页分享',
+        imageUrl: config.share.imgUrl,
+        path: this.$sharePath()
+//        path: this.$sharePath('/pages/demo/index?id=3')
+      };
+      console.log(`分享参数:`, share);
+      return share;
     },
     onLoad() {
       this.$request({

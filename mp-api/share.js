@@ -5,7 +5,7 @@ import { blackListFilter } from '@assets/js/black-list';
 
 export function shareInVue ( Vue ) {
   //分享地址生成
-  Vue.prototype.$sharePath = sharePath();
+  Vue.prototype.$sharePath = sharePath;
 
   //默认的分享，有需要的在自己的实例中使用onShareAppMessage
   Vue.mixin({

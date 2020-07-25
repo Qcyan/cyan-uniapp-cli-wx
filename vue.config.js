@@ -21,6 +21,7 @@ const config = utils.extend(publicVueConfig, {
         '@css': resolve('src/assets/css'),
         '@static': resolve('static'),
         '@components': resolve('src/components'),
+        '@mixin': resolve('src/mixin'),
 //        '$components': resolve(`src/components`)
       }
     }

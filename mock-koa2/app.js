@@ -9,6 +9,7 @@ const cors = require('koa2-cors') //允许跨域
 
 const index = require('./routes/index')
 const users = require('./routes/users')
+const more = require('./routes/more')
 
 // error handler
 onerror(app)
@@ -47,6 +48,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
+app.use(more.routes(), more.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
