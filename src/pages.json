@@ -39,7 +39,9 @@
 		{
 			"path": "pages/demo/more-load",
 			"style": {
-				"navigationBarTitleText": "加载更多"
+				"navigationBarTitleText": "加载更多",
+				// App 和 小程序都开启下拉刷新
+				"enablePullDownRefresh": true
 			}
 		}
 	],
@@ -49,5 +51,4 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}
-//	"onReachBottomDistance":160
 }
